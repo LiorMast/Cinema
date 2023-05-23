@@ -28,8 +28,8 @@ namespace eShop
         public Snack(SnackType type, SnackSize size, double price)
             : base(price)
         {
-            this.type = type;
-            this.size = size;
+            SetSnackSize(size);
+            SetSnackType(type);
         }
 
         public SnackType GetSnackType()
@@ -45,7 +45,7 @@ namespace eShop
             }
             else
             {
-                throw new ArgumentException("Invalid snack type.");
+                throw new Exception("Invalid snack type.");
             }
         }
 
@@ -62,7 +62,7 @@ namespace eShop
             }
             else
             {
-                throw new ArgumentException("Invalid snack size.");
+                throw new Exception("Invalid snack size.");
             }
         }
     }
