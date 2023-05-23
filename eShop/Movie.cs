@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eShop
 {
-    internal class Movie : Item
+    internal class Movie
     {
         private string title;
         private string director;
@@ -27,8 +27,7 @@ namespace eShop
             Thriller
         }
 
-        public Movie(string title, string director, int duration, Genre genre, double price)
-    : base(price)
+        public Movie(string title, string director, int duration, Genre genre)
         {
             SetTitle(title);
             SetDirector(director);
@@ -83,6 +82,11 @@ namespace eShop
     }
 }
 
-    }
+//add a ToString() method to display the movie details
 
+public override string ToString()
+{
+    return $"{GetTitle()} ({GetDuration()} minutes) by {GetDirector()}";
 }
+
+    }}

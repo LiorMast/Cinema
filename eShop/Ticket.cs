@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace eShop
 {
-    internal class Ticket
+    internal class Ticket : Item
     {
         private Movie movie;
         private string seatNumber;
         private DateTime screeningTime;
 
-        public Ticket(Movie movie, string seatNumber, DateTime screeningTime)
+        public Ticket(Movie movie, string seatNumber, DateTime screeningTime, double price) : base(price)
         {
             this.movie = movie;
             SetSeatNumber(seatNumber);
@@ -64,6 +64,11 @@ namespace eShop
             {
                 throw new Exception("Invalid Screening Date");
             }
+        }
+        //add a ToString method to print out the ticket information
+        public override string ToString()
+        {
+            return $"{movie.GetTitle()} - {screeningTime.ToString("dd/MM/yyyy")} - {seatNumber} - {GetPrice()}";
         }
     }
 

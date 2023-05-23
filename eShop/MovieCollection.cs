@@ -86,6 +86,16 @@ namespace eShop
 
             return null;
         }
+        //add a ToString method to display the movies in the collection
+        public override string ToString()
+        {
+            string output = "";
+            foreach (Movie movie in movies)
+            {
+                output += movie.ToString() + "\n";
+            }
+            return output;
+        }
     }
 
 }

@@ -65,6 +65,13 @@ namespace eShop
                 throw new Exception("Invalid snack size.");
             }
         }
+        //add a ToString method to print out the snack type and size and the price
+        public override string ToString()
+        {
+            return $"{type} {size} {base.price}";
+        }
+        
+
     }
 
 }

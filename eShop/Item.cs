@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace eShop
 {
-    internal class Item
+    internal abstract class Item
     {
         private static int counter = 0;
         protected double price;
         protected readonly int id;
+
+        public Item(double price)
+        {
+            this.price = price;
+            id = counter++;
+        }
+
+        public Item() : this(0) { }
 
         public double GetPrice()
         {
@@ -35,13 +43,6 @@ namespace eShop
             return id;
         }
 
-        public Item(double price)
-        {
-            this.price = price;
-            id = counter++;
-        }
-
-        public Item() : this(0) { }
     }
 
 }

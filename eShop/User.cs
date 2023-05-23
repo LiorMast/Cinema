@@ -77,6 +77,9 @@ namespace eShop
         }
     }
 
+    public override string ToString()
+    {
+        return $"Username: {username}\nEmail: {email}\nPassword: {password}\nBirthdate: {birthdate}\n";
     }
 
-}
+}}
