@@ -29,6 +29,18 @@ namespace eShop
             currentIndex = 0;
         }
 
+        
+        public Movie[] GetMovies()
+        {
+            return movies;
+        }
+
+        // add a get method for the current index
+        public int GetCurrentIndex()
+        {
+            return currentIndex;
+        }
+
         public void AddMovie(Movie movie)
         {
             if (currentIndex == movies.Length)
@@ -61,17 +73,18 @@ namespace eShop
 
         public Movie[] GetMoviesByGenre(Genre genre)
         {
-            List<Movie> moviesByGenre = new List<Movie>();
+
+            MovieCollection moviesByGenre = new MovieCollection();
 
             foreach (Movie movie in movies)
             {
-                if (movie != null && movie.GetGenre().Equals(genre.ToString(), StringComparison.OrdinalIgnoreCase))
+                if (movie != null && movie.GetGenre().ToString().ToLower().Equals(genre.ToString().ToLower()))
                 {
-                    moviesByGenre.Add(movie);
+                    moviesByGenre.AddMovie(movie);
                 }
             }
 
-            return moviesByGenre.ToArray();
+            return moviesByGenre.GetMovies();
         }
 
         public Movie SearchMovieByName(string movieName)
