@@ -9,8 +9,8 @@ namespace eShop
     internal class Item
     {
         private static int counter = 0;
-        private double price;
-        private int id;
+        protected double price;
+        protected readonly int id;
 
         public double GetPrice()
         {
