@@ -23,7 +23,6 @@ namespace eShop
             return movies;
         }
 
-        // add a get method for the current index
         public int GetCurrentIndex()
         {
             return currentIndex;

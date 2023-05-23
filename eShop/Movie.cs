@@ -30,10 +30,10 @@ namespace eShop
         public Movie(string title, string director, int duration, Genre genre, double price)
     : base(price)
         {
-            this.title = title;
-            this.director = director;
-            this.duration = duration;
-            this.genre = genre;
+            SetTitle(title);
+            SetDirector(director);
+            SetDuration(duration);
+            SetGenre(genre);
         }
 
         public string GetTitle()
@@ -72,9 +72,17 @@ namespace eShop
         }
 
         public void SetGenre(Genre newGenre)
-        {
-            genre = newGenre;
-        }
+{
+    if (Enum.IsDefined(typeof(Genre), newGenre))
+    {
+        this.genre = newGenre;
+    }
+    else
+    {
+        throw new Exception("Invalid genre.");
+    }
+}
+
     }
 
 }
