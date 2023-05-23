@@ -12,13 +12,16 @@ namespace eShop
         private string email;
         private string password;
         private DateTime birthdate;
+        private Cart cart;
 
-        public User(string username, string email, string password, DateTime birthdate)
+        public User(string username, string email, string password, int birthday, int birthdayMonth, int birthdayYear)
         {
-            this.username = username;
-            this.email = email;
-            this.password = password;
-            this.birthdate = birthdate;
+            
+            SetUsername(username);
+            SetEmail(email);
+            SetPassword(password);
+            SetBirthdate(birthday, birthdayMonth, birthdayYear);
+            cart = new Cart();
         }
 
         public string GetUsername()
@@ -62,11 +65,18 @@ namespace eShop
         {
             return birthdate;
         }
-
-        public void SetBirthdate(DateTime newBirthdate)
+    public void SetBirthdate(int day, int month, int year)
+    {
+        try
         {
-            birthdate = newBirthdate;
+            this.birthdate = new DateTime(year, month, day);
         }
+        catch (ArgumentOutOfRangeException)
+        {
+            throw new Exception("Invalid birthdate.");
+        }
+    }
+
     }
 
 }
