@@ -11,9 +11,23 @@ namespace eShop
         private string title;
         private string director;
         private int duration;
-        private string genre;
+        private Genre genre;
 
-        public Movie(string title, string director, int duration, string genre)
+        //
+
+        public enum Genre
+        {
+            Action,
+            Comedy,
+            Drama,
+            Fantasy,
+            Horror,
+            Romance,
+            SciFi,
+            Thriller
+        }
+
+        public Movie(string title, string director, int duration, Genre genre)
         {
             this.title = title;
             this.director = director;
@@ -51,12 +65,12 @@ namespace eShop
             duration = newDuration;
         }
 
-        public string GetGenre()
+        public Genre GetGenre()
         {
             return genre;
         }
 
-        public void SetGenre(string newGenre)
+        public void SetGenre(Genre newGenre)
         {
             genre = newGenre;
         }
