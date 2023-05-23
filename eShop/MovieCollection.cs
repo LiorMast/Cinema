@@ -11,18 +11,6 @@ namespace eShop
         private Movie[] movies;
         private int currentIndex;
 
-        public enum Genre
-        {
-            Action,
-            Comedy,
-            Drama,
-            Fantasy,
-            Horror,
-            Romance,
-            SciFi,
-            Thriller
-        }
-
         public MovieCollection()
         {
             movies = new Movie[10]; // Initial capacity of 10
@@ -71,7 +59,7 @@ namespace eShop
             }
         }
 
-        public Movie[] GetMoviesByGenre(Genre genre)
+        public Movie[] GetMoviesByGenre(string genre)
         {
 
             MovieCollection moviesByGenre = new MovieCollection();

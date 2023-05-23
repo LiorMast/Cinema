@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eShop
 {
-    internal class Movie
+    internal class Movie : Item
     {
         private string title;
         private string director;
@@ -27,7 +27,8 @@ namespace eShop
             Thriller
         }
 
-        public Movie(string title, string director, int duration, Genre genre)
+        public Movie(string title, string director, int duration, Genre genre, double price)
+    : base(price)
         {
             this.title = title;
             this.director = director;
