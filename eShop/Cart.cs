@@ -45,6 +45,7 @@ namespace eShop
                     return;
                 }
             }
+            throw new Exception("Item not found in cart");
         }
 
         public int GetItemCount()

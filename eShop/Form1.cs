@@ -34,7 +34,7 @@ namespace Cinema
             CreateUser usr = new CreateUser();
             usr.ShowDialog();
             activeUser = usr.GetUser();
-            lblUser1.Text = activeUser.ToString();
+            lblUser1.Text = $"Current User: {activeUser.GetUsername()}";
             
         }
     }
