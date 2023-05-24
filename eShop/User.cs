@@ -41,7 +41,7 @@ namespace eShop
 
         public void SetEmail(string newEmail)
         {
-            if (newEmail.Contains("@"))
+            if (newEmail.Contains("@")&& newEmail.Contains("."))
             {
                 email = newEmail;
             }
@@ -79,6 +79,11 @@ namespace eShop
     public Cart GetCart()
     {
         return cart;
+    }
+
+    public void AddToCart(Item item)
+    {
+        cart.AddItem(item);
     }
 
     public override string ToString()
