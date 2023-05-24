@@ -81,11 +81,6 @@ namespace eShop
         return cart;
     }
 
-    public void AddToCart(Item item)
-    {
-        cart.AddItem(item);
-    }
-
     public override string ToString()
     {
         return $"Username: {username}\nEmail: {email}\nPassword: {password}\nBirthdate: {birthdate}\n";
