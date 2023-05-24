@@ -31,6 +31,7 @@
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblUser1 = new System.Windows.Forms.Label();
+            this.lblCartSum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCreateAccount
@@ -65,11 +66,22 @@
             this.lblUser1.TabIndex = 2;
             this.lblUser1.Text = "label1";
             // 
+            // lblCartSum
+            // 
+            this.lblCartSum.AutoSize = true;
+            this.lblCartSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblCartSum.Location = new System.Drawing.Point(731, 9);
+            this.lblCartSum.Name = "lblCartSum";
+            this.lblCartSum.Size = new System.Drawing.Size(60, 24);
+            this.lblCartSum.TabIndex = 3;
+            this.lblCartSum.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 550);
+            this.Controls.Add(this.lblCartSum);
             this.Controls.Add(this.lblUser1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnCreateAccount);
@@ -88,6 +100,7 @@
         private System.Windows.Forms.Button btnCreateAccount;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblUser1;
+        private System.Windows.Forms.Label lblCartSum;
     }
 }
 
