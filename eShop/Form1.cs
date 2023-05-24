@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eShop;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,27 @@ namespace Cinema
 {
     public partial class Form1 : Form
     {
+        private User activeUser;
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            Form2 usr = new Form2();
+            usr.ShowDialog();
+            
         }
     }
 }
