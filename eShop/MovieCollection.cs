@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eShop
 {
-    internal class MovieCollection
+    public class MovieCollection
     {
         private Movie[] movies;
         private int currentIndex;

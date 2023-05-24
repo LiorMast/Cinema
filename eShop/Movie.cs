@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eShop
 {
-    internal class Movie
+    public class Movie
     {
         private string title;
         private string director;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eShop
 {
-    internal class Cart
+    public class Cart
     {
         private Item[] items;
         private int currentIndex;

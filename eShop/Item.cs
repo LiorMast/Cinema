@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eShop
 {
-    internal abstract class Item
+    public abstract class Item
     {
         private static int counter = 0;
         protected double price;

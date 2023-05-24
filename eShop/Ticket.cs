@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eShop
 {
-    internal class Ticket : Item
+    public class Ticket : Item
     {
         private Movie movie;
         private string seatNumber;

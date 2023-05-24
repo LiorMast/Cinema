@@ -76,6 +76,10 @@ namespace eShop
             throw new Exception("Invalid birthdate.");
         }
     }
+    public Cart GetCart()
+    {
+        return cart;
+    }
 
     public override string ToString()
     {

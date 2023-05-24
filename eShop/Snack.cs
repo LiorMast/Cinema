@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eShop
 {
-    internal class Snack : Item
+    public class Snack : Item
     {
         public enum SnackType
         {
