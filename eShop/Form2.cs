@@ -12,29 +12,19 @@ namespace eShop
 {
     public partial class Form2 : Form
     {
-        private User temp;
+        private User activeUser;
         public Form2()
         {
             InitializeComponent();
         }
-
-        public User GetUser() => this.temp;
-
-        private void btnUsrCreate_Click(object sender, EventArgs e)
+        public Form2(User activeUser)
         {
-            bool isnotvalid = true;
-            while (isnotvalid)
-            {
-                try
-                {
-                    temp = new User(txtUsrName.Text, txtEmail.Text, txtPassword.Text, 1, 1, 1990);
-                    isnotvalid = false;
-                }catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            Close();
+            this.activeUser = activeUser;
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

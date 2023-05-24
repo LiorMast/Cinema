@@ -31,8 +31,10 @@ namespace Cinema
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            Form2 usr = new Form2();
+            CreateUser usr = new CreateUser();
             usr.ShowDialog();
+            activeUser = usr.GetUser();
+            lblUser1.Text = activeUser.ToString();
             
         }
     }
