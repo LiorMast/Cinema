@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace eShop
@@ -31,6 +32,7 @@ namespace eShop
 
         public void SetUsername(string newUsername)
         {
+            if(String.IsNullOrEmpty(newUsername)) throw new Exception("Username Can't be empty!");
             username = newUsername;
         }
 
@@ -39,9 +41,15 @@ namespace eShop
             return email;
         }
 
+        private static bool IsValidEmail(string input)
+        {
+            Regex regex = new Regex("^[A-Za-z]+@[A-Za-z]+\\.[A-Za-z0-9]{2,}$", RegexOptions.IgnoreCase);
+            return regex.IsMatch(input);
+        }
+
         public void SetEmail(string newEmail)
         {
-            if (newEmail.Contains("@")&& newEmail.Contains("."))
+            if (IsValidEmail(newEmail))
             {
                 email = newEmail;
             }
@@ -58,6 +66,7 @@ namespace eShop
 
         public void SetPassword(string newPassword)
         {
+            if (String.IsNullOrEmpty(newPassword)) throw new Exception("Password Can't be empty!");
             password = newPassword;
         }
 

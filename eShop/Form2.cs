@@ -13,6 +13,10 @@ namespace eShop
     public partial class Form2 : Form
     {
         private User activeUser;
+        private MovieCollection movies;
+
+
+
         public Form2()
         {
             InitializeComponent();

@@ -81,7 +81,7 @@ namespace eShop
                 totalPrice += items[i].GetPrice();
             }
 
-            return totalPrice;
+            return Math.Round(totalPrice,2);
         }
     }
 
