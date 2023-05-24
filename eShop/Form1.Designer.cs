@@ -32,12 +32,13 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblUser1 = new System.Windows.Forms.Label();
             this.lblCartSum = new System.Windows.Forms.Label();
+            this.btnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreateAccount
             // 
             this.btnCreateAccount.Location = new System.Drawing.Point(316, 199);
-            this.btnCreateAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(111, 30);
             this.btnCreateAccount.TabIndex = 0;
@@ -76,16 +77,28 @@
             this.lblCartSum.TabIndex = 3;
             this.lblCartSum.Text = "label1";
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(350, 260);
+            this.btnTest.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(111, 30);
+            this.btnTest.TabIndex = 4;
+            this.btnTest.Text = "Test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 550);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.lblCartSum);
             this.Controls.Add(this.lblUser1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnCreateAccount);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "Form1";
@@ -101,6 +114,7 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblUser1;
         private System.Windows.Forms.Label lblCartSum;
+        private System.Windows.Forms.Button btnTest;
     }
 }
 

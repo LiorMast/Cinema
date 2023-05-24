@@ -1,0 +1,5 @@
+("The Shawshank Redemption", "Frank Darabont", 142, Genre.Drama)
+("The Dark Knight", "Christopher Nolan", 152, Genre.Action)
+("Inception", "Christopher Nolan", 148, Genre.SciFi)
+("Pulp Fiction", "Quentin Tarantino", 154, Genre.Crime)
+("The Godfather", "Francis Ford Coppola", 175, Genre.Drama)

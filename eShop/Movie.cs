@@ -82,11 +82,9 @@ namespace eShop
     }
 }
 
-//add a ToString() method to display the movie details
-
 public override string ToString()
 {
-    return $"{GetTitle()} ({GetDuration()} minutes) by {GetDirector()}";
+    return $"{GetTitle()} a {GetGenre()} film ({GetDuration()} minutes) by {GetDirector()}";
 }
 
     }}

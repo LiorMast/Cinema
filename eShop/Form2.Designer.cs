@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lblActiveUser = new System.Windows.Forms.Label();
+            this.rtbInfo = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // lblActiveUser
@@ -40,11 +41,20 @@
             this.lblActiveUser.Size = new System.Drawing.Size(0, 20);
             this.lblActiveUser.TabIndex = 0;
             // 
+            // rtbInfo
+            // 
+            this.rtbInfo.Location = new System.Drawing.Point(144, 67);
+            this.rtbInfo.Name = "rtbInfo";
+            this.rtbInfo.Size = new System.Drawing.Size(283, 185);
+            this.rtbInfo.TabIndex = 1;
+            this.rtbInfo.Text = "";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rtbInfo);
             this.Controls.Add(this.lblActiveUser);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -57,5 +67,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblActiveUser;
+        private System.Windows.Forms.RichTextBox rtbInfo;
     }
 }

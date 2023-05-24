@@ -92,7 +92,7 @@ namespace eShop
             string output = "";
             foreach (Movie movie in movies)
             {
-                output += movie.ToString() + "\n";
+                if(movie !=null) output += movie.ToString() + "\n";
             }
             return output;
         }
