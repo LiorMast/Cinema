@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinema;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +31,7 @@ namespace eShop
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                if(ex.Message == "Invalid email format.")
+                if (ex.Message == "Invalid email format.")
                 {
                     txtEmail.Text = "";
                 }

@@ -50,6 +50,7 @@ namespace eShop
                 Enum.TryParse(temp[3], out gen);
                 Movie mov = new Movie(temp[0], temp[1], int.Parse(temp[2]), gen);
                 movies.AddMovie(mov);
+                
 
             }
             rtbInfo.Text = movies.ToString();

@@ -14,6 +14,7 @@ namespace Cinema
     public partial class Form1 : Form
     {
         private User activeUser;
+        private UserCollection users = new UserCollection();
         public Form1()
         {
             InitializeComponent();
@@ -33,8 +34,17 @@ namespace Cinema
         {
             CreateUser usr = new CreateUser();
             usr.ShowDialog();
-            activeUser = usr.GetUser();
-            lblUser1.Text = $"Current User: {activeUser.GetUsername()}";
+
+            try
+            {
+                activeUser = usr.GetUser();
+                users.AddUser(activeUser);
+                lblUser1.Text = $"Current User: {activeUser.GetUsername()}";
+            }catch(Exception)
+            {
+                MessageBox.Show("Cancelled", "User not created", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
 
             
         }
