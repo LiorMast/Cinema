@@ -37,18 +37,19 @@ namespace eShop
 
             for (int i = 0; i < file.Length; i++)
             {
-                file[i] = file[i].Trim().Substring(1, file[i].Length - 2);
+                file[i] = file[i].Trim().Replace("(", "").Replace(")", "");
             }
             foreach (var item in file)
             {
                 string[] temp = item.Split(',');
                 for (int i = 0; i < temp.Length; i++)
                 {
-                    temp[i] = temp[i].Trim();
+                    temp[i] = temp[i].Trim().Replace("\"","");
                 }
                 Movie.Genre gen;
-                Enum.TryParse(temp[3], out gen);
-                Movie mov = new Movie(temp[0], temp[1], int.Parse(temp[2]), gen);
+                Enum.TryParse(temp[3],true, out gen);
+                string path = @"..\..\Data\Posters\" + temp[4];
+                Movie mov = new Movie(temp[0], temp[1], int.Parse(temp[2]), gen, path);
                 movies.AddMovie(mov);
                 
 
