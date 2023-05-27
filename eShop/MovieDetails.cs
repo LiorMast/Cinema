@@ -16,5 +16,17 @@ namespace eShop
         {
             InitializeComponent();
         }
+
+        public MovieDetails(Movie movie) : this()
+        { 
+            picPoster.ImageLocation = movie.GetPicture();
+            lblMovieTitle.Text = movie.GetTitle();
+            lblMovieDetails.Text = $"Director: {movie.GetDirector()}\nGenre: {movie.GetGenre()}\nLength: {movie.GetDuration()} minutes";
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

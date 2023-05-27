@@ -1,6 +1,6 @@
 ﻿namespace Cinema
 {
-    partial class Form1
+    partial class WelcomePage
     {
         /// <summary>
         /// Required designer variable.

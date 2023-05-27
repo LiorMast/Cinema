@@ -25,12 +25,13 @@ namespace eShop
         {
             try
             {
-                temp = new User(txtUsrName.Text, txtEmail.Text, txtPassword.Text, 1, 1, 1990);
+                temp = new User(txtUsrName.Text, txtEmail.Text, txtPassword.Text, dtpBirthday.Value);
                 Close();
             }
+            catch (IndexOutOfRangeException){ MessageBox.Show("Invalid Input!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 if (ex.Message == "Invalid email format.")
                 {
                     txtEmail.Text = "";
@@ -38,6 +39,11 @@ namespace eShop
             }
             
             
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
         }
     }
 }

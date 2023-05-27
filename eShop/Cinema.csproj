@@ -47,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cart.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="WelcomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="WelcomePage.Designer.cs">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateUser.cs">
       <SubType>Form</SubType>
@@ -59,11 +59,11 @@
     <Compile Include="CreateUser.Designer.cs">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Browse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Browse.Designer.cs">
+      <DependentUpon>Browse.cs</DependentUpon>
     </Compile>
     <Compile Include="Item.cs" />
     <Compile Include="Movie.cs" />
@@ -80,14 +80,14 @@
     <Compile Include="Ticket.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserCollection.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="WelcomePage.resx">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Browse.resx">
+      <DependentUpon>Browse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovieDetails.resx">
       <DependentUpon>MovieDetails.cs</DependentUpon>
@@ -116,6 +116,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Movies.txt" />
+    <Content Include="Posters\avengers.jpg" />
+    <Content Include="Posters\darkknight.jpg" />
+    <Content Include="Posters\godfather.jpg" />
+    <Content Include="Posters\inception.jpg" />
+    <Content Include="Posters\pulp.jpg" />
+    <Content Include="Posters\shawshank.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

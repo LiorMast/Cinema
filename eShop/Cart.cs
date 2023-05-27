@@ -75,10 +75,14 @@ namespace eShop
         public double GetTotalPrice()
         {
             double totalPrice = 0;
-
-            for (int i = 0; i < currentIndex; i++)
+            try
             {
-                totalPrice += items[i].GetPrice();
+                for (int i = 0; i < currentIndex; i++)
+                {
+                    totalPrice += items[i].GetPrice();
+                }
+            }catch (Exception) {
+            return 0;
             }
 
             return Math.Round(totalPrice,2);

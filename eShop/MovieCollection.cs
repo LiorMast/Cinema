@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace eShop
 {
@@ -86,7 +87,33 @@ namespace eShop
 
             return null;
         }
-        //add a ToString method to display the movies in the collection
+
+        public void LoadMovies()
+        {
+            string[] file = File.ReadAllLines(@"..\..\Data\movies.txt");
+
+            for (int i = 0; i < file.Length; i++)
+            {
+                file[i] = file[i].Trim().Replace("(", "").Replace(")", "");
+            }
+            foreach (var item in file)
+            {
+                string[] temp = item.Split(',');
+                for (int i = 0; i < temp.Length; i++)
+                {
+                    temp[i] = temp[i].Trim().Replace("\"", "");
+                }
+                Movie.Genre gen;
+                Enum.TryParse(temp[3], true, out gen);
+                string path = @"..\..\Data\Posters\" + temp[4];
+                Movie mov = new Movie(temp[0], temp[1], int.Parse(temp[2]), gen, path);
+                this.AddMovie(mov);
+
+
+            }
+        }
+
+
         public override string ToString()
         {
             string output = "";

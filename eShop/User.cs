@@ -15,15 +15,17 @@ namespace eShop
         private DateTime birthdate;
         private Cart cart;
 
-        public User(string username, string email, string password, int birthday, int birthdayMonth, int birthdayYear)
+        public User(string username, string email, string password, DateTime birthdate)
         {
             
-            SetUsername(username);
+            SetUsername(Capitalize(username));
             SetEmail(email);
             SetPassword(password);
-            SetBirthdate(birthday, birthdayMonth, birthdayYear);
+            SetBirthdate(birthdate);
             cart = new Cart();
         }
+
+        public static string Capitalize(string str) => $"{str[0].ToString().ToUpper()}{str.Substring(1).ToLower()}";
 
         public string GetUsername()
         {
@@ -43,7 +45,7 @@ namespace eShop
 
         private static bool IsValidEmail(string input)
         {
-            Regex regex = new Regex("^[A-Za-z]+@[A-Za-z]+\\.[A-Za-z0-9]{2,}$", RegexOptions.IgnoreCase);
+            Regex regex = new Regex("^[A-Za-z0-9]+@[A-Za-z0-9]+\\.[A-Za-z]{2,}$", RegexOptions.IgnoreCase);
             return regex.IsMatch(input);
         }
 
@@ -74,13 +76,17 @@ namespace eShop
         {
             return birthdate;
         }
-    public void SetBirthdate(int day, int month, int year)
+    public void SetBirthdate(DateTime dateTime)
     {
+            if (dateTime >= DateTime.Today)
+            {
+                throw new Exception("Date of birth must be in the past!");
+            }
         try
         {
-            this.birthdate = new DateTime(year, month, day);
+            this.birthdate = dateTime;
         }
-        catch (ArgumentOutOfRangeException)
+        catch (Exception)
         {
             throw new Exception("Invalid birthdate.");
         }

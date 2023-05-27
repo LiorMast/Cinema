@@ -11,13 +11,15 @@ using System.Windows.Forms;
 
 namespace Cinema
 {
-    public partial class Form1 : Form
+    public partial class WelcomePage : Form
     {
         private User activeUser;
         private UserCollection users = new UserCollection();
-        public Form1()
+        private MovieCollection movies = new MovieCollection();
+        public WelcomePage()
         {
             InitializeComponent();
+            movies.LoadMovies();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -51,7 +53,7 @@ namespace Cinema
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
+            Browse frm = new Browse(new User("TESTrrrrrrrrrrrrrrrrrr","TEST@TEST.TEST","1234",new DateTime(1990,1,1)));
             frm.ShowDialog();
         }
     }
