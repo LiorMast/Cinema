@@ -58,10 +58,36 @@ namespace eShop
             return screeningTime;
         }
 
-        public string ScreeningTimeToString()
+        public string ScreeningTimeToString(ScreeningTime screeningTime)
         {
-            
+            if(screeningTime == ScreeningTime._10AM)
+            {
+                return "10:00";
+            }
+            else if(screeningTime == ScreeningTime._13PM)
+            {
+                return "13:00";
+            }
+            else if(screeningTime == ScreeningTime._16PM)
+            {
+                return "16:00";
+            }
+            else if(screeningTime == ScreeningTime._19PM)
+            {
+                return "19:00";
+            }
+            else if(screeningTime == ScreeningTime._22PM)
+            {
+                return "22:00";
+            }
+            else
+            {
+                return "Invalid screening time.";
+            }
+
         }
+
+        
 
         public void SetScreeningTime(ScreeningTime screeningTime)
         {
@@ -78,7 +104,7 @@ namespace eShop
 
         public override string ToString()
         {
-            return $"{movie.GetTitle()} - {screeningTime.ToString("dd/MM/yyyy")} Seat {seatNumber} Price: {GetPrice()}";
+            return $"{movie.GetTitle()} - {ScreeningTimeToString(screeningTime)} Seat {seatNumber} Price: {GetPrice()}";
         }
     }
 
