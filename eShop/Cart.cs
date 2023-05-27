@@ -48,6 +48,11 @@ namespace eShop
             throw new Exception("Item not found in cart");
         }
 
+        public Item[] GetItems()
+        {
+            return items;
+        }
+
         public int GetItemCount()
         {
             return currentIndex;

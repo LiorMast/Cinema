@@ -36,6 +36,7 @@
             this.btnShowInfo = new System.Windows.Forms.Button();
             this.lblUsrInfo = new System.Windows.Forms.Label();
             this.btnAddToCart = new System.Windows.Forms.Button();
+            this.btnViewCart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picFeatured)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +95,7 @@
             this.lblUsrInfo.Size = new System.Drawing.Size(66, 24);
             this.lblUsrInfo.TabIndex = 4;
             this.lblUsrInfo.Text = "label1";
+            this.lblUsrInfo.Click += new System.EventHandler(this.lblUsrInfo_Click);
             // 
             // btnAddToCart
             // 
@@ -106,11 +108,23 @@
             this.btnAddToCart.UseVisualStyleBackColor = true;
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
+            // btnViewCart
+            // 
+            this.btnViewCart.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewCart.Location = new System.Drawing.Point(393, 406);
+            this.btnViewCart.Name = "btnViewCart";
+            this.btnViewCart.Size = new System.Drawing.Size(127, 32);
+            this.btnViewCart.TabIndex = 6;
+            this.btnViewCart.Text = "View Cart";
+            this.btnViewCart.UseVisualStyleBackColor = true;
+            this.btnViewCart.Click += new System.EventHandler(this.btnViewCart_Click);
+            // 
             // Browse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnViewCart);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.lblUsrInfo);
             this.Controls.Add(this.btnShowInfo);
@@ -135,5 +149,6 @@
         private System.Windows.Forms.Button btnShowInfo;
         private System.Windows.Forms.Label lblUsrInfo;
         private System.Windows.Forms.Button btnAddToCart;
+        private System.Windows.Forms.Button btnViewCart;
     }
 }

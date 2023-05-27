@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cart.cs" />
+    <Compile Include="CartInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CartInfo.Designer.cs">
+      <DependentUpon>CartInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Ticket.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserCollection.cs" />
+    <EmbeddedResource Include="CartInfo.resx">
+      <DependentUpon>CartInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WelcomePage.resx">
       <DependentUpon>WelcomePage.cs</DependentUpon>
     </EmbeddedResource>

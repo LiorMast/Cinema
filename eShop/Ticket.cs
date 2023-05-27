@@ -10,9 +10,18 @@ namespace eShop
     {
         private Movie movie;
         private string seatNumber;
-        private DateTime screeningTime;
+        private ScreeningTime screeningTime;
 
-        public Ticket(Movie movie, string seatNumber, DateTime screeningTime, double price) : base(price)
+        public enum ScreeningTime
+        {
+            _10AM = 10,
+            _13PM = 13,
+            _16PM = 16,
+            _19PM = 19,
+            _22PM = 22
+        }
+
+        public Ticket(Movie movie, string seatNumber, ScreeningTime screeningTime, double price) : base(price)
         {
             this.movie = movie;
             SetSeatNumber(seatNumber);
@@ -44,31 +53,32 @@ namespace eShop
             seatNumber = newSeatNumber;
         }
 
-        public DateTime GetScreeningTime()
+        public ScreeningTime GetScreeningTime()
         {
             return screeningTime;
         }
 
-        public void SetScreeningTime(DateTime newScreeningTime)
+        public string ScreeningTimeToString()
         {
-            try
-            {
-                if (newScreeningTime < DateTime.Now)
-                {
-                    throw new Exception("Screening time cannot be in the past.");
-                }
+            
+        }
 
-                screeningTime = newScreeningTime;
-            }
-            catch(Exception)
+        public void SetScreeningTime(ScreeningTime screeningTime)
+        {
+            // Check if the provided screening time is valid
+            if (Enum.IsDefined(typeof(ScreeningTime), screeningTime))
             {
-                throw new Exception("Invalid Screening Date");
+                this.screeningTime = screeningTime;
+            }
+            else
+            {
+                throw new ArgumentException("Invalid screening time.");
             }
         }
-        //add a ToString method to print out the ticket information
+
         public override string ToString()
         {
-            return $"{movie.GetTitle()} - {screeningTime.ToString("dd/MM/yyyy")} - {seatNumber} - {GetPrice()}";
+            return $"{movie.GetTitle()} - {screeningTime.ToString("dd/MM/yyyy")} Seat {seatNumber} Price: {GetPrice()}";
         }
     }
 
