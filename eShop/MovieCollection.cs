@@ -106,7 +106,7 @@ namespace eShop
                 Movie.Genre gen;
                 Enum.TryParse(temp[3], true, out gen);
                 string path = @"..\..\Data\Posters\" + temp[4];
-                Movie mov = new Movie(temp[0], temp[1], int.Parse(temp[2]), gen, path);
+                Movie mov = new Movie(temp[0], temp[1], int.Parse(temp[2]), gen, path, temp[5]);
                 this.AddMovie(mov);
 
 

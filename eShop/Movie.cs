@@ -13,6 +13,7 @@ namespace eShop
         private int duration;
         private Genre genre;
         private string picturePath;
+        private string description;
 
         //
 
@@ -28,13 +29,14 @@ namespace eShop
             Thriller
         }
 
-        public Movie(string title, string director, int duration, Genre genre, string picturePath)
+        public Movie(string title, string director, int duration, Genre genre, string picturePath, string description)
         {
             SetTitle(title);
             SetDirector(director);
             SetDuration(duration);
             SetGenre(genre);
-            this.picturePath = picturePath;
+            SetPicture(picturePath);
+            SetDescription(description);
         }
 
         public string GetTitle()
@@ -85,6 +87,12 @@ namespace eShop
         }
 
         public string GetPicture() => picturePath;
+
+        public  void SetPicture(string newPicture) { if (newPicture != null) { picturePath = newPicture; } else { throw new Exception("Invalid picture path."); } }
+
+        public string GetDescription() => description;
+
+        public void SetDescription(string newDescription) { if (newDescription != null) { description = newDescription; } else { throw new Exception("Invalid description."); } }
 
 public override string ToString()
 {

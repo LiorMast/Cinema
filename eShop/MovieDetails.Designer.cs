@@ -31,6 +31,7 @@
             this.picPoster = new System.Windows.Forms.PictureBox();
             this.lblMovieTitle = new System.Windows.Forms.Label();
             this.lblMovieDetails = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPoster)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +66,16 @@
             this.lblMovieDetails.TabIndex = 2;
             this.lblMovieDetails.Text = "label1";
             // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.Location = new System.Drawing.Point(324, 284);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(91, 31);
+            this.lblDescription.TabIndex = 3;
+            this.lblDescription.Text = "label1";
+            // 
             // MovieDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -72,11 +83,13 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(625, 431);
+            this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblMovieDetails);
             this.Controls.Add(this.lblMovieTitle);
             this.Controls.Add(this.picPoster);
             this.Name = "MovieDetails";
             this.Text = "MovieDetails";
+            this.Load += new System.EventHandler(this.MovieDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picPoster)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -88,5 +101,6 @@
         private System.Windows.Forms.PictureBox picPoster;
         private System.Windows.Forms.Label lblMovieTitle;
         private System.Windows.Forms.Label lblMovieDetails;
+        private System.Windows.Forms.Label lblDescription;
     }
 }
