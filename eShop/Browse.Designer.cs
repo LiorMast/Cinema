@@ -45,9 +45,10 @@
             // 
             // picFeatured
             // 
-            this.picFeatured.Location = new System.Drawing.Point(8, 81);
+            this.picFeatured.Location = new System.Drawing.Point(11, 100);
+            this.picFeatured.Margin = new System.Windows.Forms.Padding(4);
             this.picFeatured.Name = "picFeatured";
-            this.picFeatured.Size = new System.Drawing.Size(215, 357);
+            this.picFeatured.Size = new System.Drawing.Size(287, 439);
             this.picFeatured.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFeatured.TabIndex = 0;
             this.picFeatured.TabStop = false;
@@ -62,27 +63,30 @@
             // 
             this.lblFeatured.AutoSize = true;
             this.lblFeatured.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblFeatured.Location = new System.Drawing.Point(9, 37);
+            this.lblFeatured.Location = new System.Drawing.Point(12, 46);
+            this.lblFeatured.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFeatured.Name = "lblFeatured";
-            this.lblFeatured.Size = new System.Drawing.Size(214, 25);
+            this.lblFeatured.Size = new System.Drawing.Size(268, 31);
             this.lblFeatured.TabIndex = 1;
             this.lblFeatured.Text = "Our Featured Movies";
             // 
             // cmbMovies
             // 
             this.cmbMovies.FormattingEnabled = true;
-            this.cmbMovies.Location = new System.Drawing.Point(296, 120);
+            this.cmbMovies.Location = new System.Drawing.Point(395, 148);
+            this.cmbMovies.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMovies.Name = "cmbMovies";
-            this.cmbMovies.Size = new System.Drawing.Size(265, 21);
+            this.cmbMovies.Size = new System.Drawing.Size(352, 24);
             this.cmbMovies.TabIndex = 2;
             this.cmbMovies.SelectedIndexChanged += new System.EventHandler(this.cmbMovies_SelectedIndexChanged);
             // 
             // btnShowInfo
             // 
             this.btnShowInfo.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowInfo.Location = new System.Drawing.Point(296, 204);
+            this.btnShowInfo.Location = new System.Drawing.Point(395, 251);
+            this.btnShowInfo.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowInfo.Name = "btnShowInfo";
-            this.btnShowInfo.Size = new System.Drawing.Size(127, 32);
+            this.btnShowInfo.Size = new System.Drawing.Size(169, 39);
             this.btnShowInfo.TabIndex = 3;
             this.btnShowInfo.Text = "Show Movie Info";
             this.btnShowInfo.UseVisualStyleBackColor = true;
@@ -93,9 +97,10 @@
             this.lblUsrInfo.AutoSize = true;
             this.lblUsrInfo.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblUsrInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblUsrInfo.Location = new System.Drawing.Point(734, 0);
+            this.lblUsrInfo.Location = new System.Drawing.Point(982, 0);
+            this.lblUsrInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsrInfo.Name = "lblUsrInfo";
-            this.lblUsrInfo.Size = new System.Drawing.Size(66, 24);
+            this.lblUsrInfo.Size = new System.Drawing.Size(85, 29);
             this.lblUsrInfo.TabIndex = 4;
             this.lblUsrInfo.Text = "label1";
             this.lblUsrInfo.Click += new System.EventHandler(this.lblUsrInfo_Click);
@@ -103,9 +108,10 @@
             // btnAddToCart
             // 
             this.btnAddToCart.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddToCart.Location = new System.Drawing.Point(434, 204);
+            this.btnAddToCart.Location = new System.Drawing.Point(579, 251);
+            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(127, 32);
+            this.btnAddToCart.Size = new System.Drawing.Size(169, 39);
             this.btnAddToCart.TabIndex = 5;
             this.btnAddToCart.Text = "Add To Cart";
             this.btnAddToCart.UseVisualStyleBackColor = true;
@@ -114,9 +120,10 @@
             // btnViewCart
             // 
             this.btnViewCart.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewCart.Location = new System.Drawing.Point(393, 406);
+            this.btnViewCart.Location = new System.Drawing.Point(524, 500);
+            this.btnViewCart.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewCart.Name = "btnViewCart";
-            this.btnViewCart.Size = new System.Drawing.Size(127, 32);
+            this.btnViewCart.Size = new System.Drawing.Size(169, 39);
             this.btnViewCart.TabIndex = 6;
             this.btnViewCart.Text = "View Cart";
             this.btnViewCart.UseVisualStyleBackColor = true;
@@ -125,35 +132,38 @@
             // cmbScreeningTIme
             // 
             this.cmbScreeningTIme.FormattingEnabled = true;
-            this.cmbScreeningTIme.Location = new System.Drawing.Point(697, 120);
+            this.cmbScreeningTIme.Location = new System.Drawing.Point(929, 148);
+            this.cmbScreeningTIme.Margin = new System.Windows.Forms.Padding(4);
             this.cmbScreeningTIme.Name = "cmbScreeningTIme";
-            this.cmbScreeningTIme.Size = new System.Drawing.Size(91, 21);
+            this.cmbScreeningTIme.Size = new System.Drawing.Size(120, 24);
             this.cmbScreeningTIme.TabIndex = 7;
             this.cmbScreeningTIme.SelectedIndexChanged += new System.EventHandler(this.cmbScreeningTIme_SelectedIndexChanged);
             // 
             // lblMovieName
             // 
             this.lblMovieName.AutoSize = true;
-            this.lblMovieName.Location = new System.Drawing.Point(251, 124);
+            this.lblMovieName.Location = new System.Drawing.Point(335, 153);
+            this.lblMovieName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMovieName.Name = "lblMovieName";
-            this.lblMovieName.Size = new System.Drawing.Size(42, 13);
+            this.lblMovieName.Size = new System.Drawing.Size(50, 16);
             this.lblMovieName.TabIndex = 8;
             this.lblMovieName.Text = "Movie: ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(656, 124);
+            this.label1.Location = new System.Drawing.Point(875, 153);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "TIme: ";
             // 
             // Browse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMovieName);
             this.Controls.Add(this.cmbScreeningTIme);
@@ -164,6 +174,7 @@
             this.Controls.Add(this.cmbMovies);
             this.Controls.Add(this.lblFeatured);
             this.Controls.Add(this.picFeatured);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Browse";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
