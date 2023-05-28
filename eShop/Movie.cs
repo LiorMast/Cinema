@@ -13,6 +13,7 @@ namespace eShop
         private int duration;
         private Genre genre;
         private string picturePath;
+        private string description;
 
         //
 
@@ -28,13 +29,14 @@ namespace eShop
             Thriller
         }
 
-        public Movie(string title, string director, int duration, Genre genre, string picturePath)
+        public Movie(string title, string director, int duration, Genre genre, string picturePath, string description)
         {
             SetTitle(title);
             SetDirector(director);
             SetDuration(duration);
             SetGenre(genre);
             this.picturePath = picturePath;
+            this.description = description;
         }
 
         public string GetTitle()
