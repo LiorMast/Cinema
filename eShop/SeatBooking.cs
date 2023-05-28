@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Cinema
 {
+    
     public partial class SeatBooking : Form
     {
         public SeatBooking()
@@ -58,8 +59,6 @@ namespace Cinema
             }
         }
 
-        int countchairs = 0;
-        string[] chairs = new string[pnlChairs.col]; 
 
         private void Lblchair_Click(object sender, EventArgs e)
         {
@@ -71,6 +70,10 @@ namespace Cinema
             else if(lblchair.BackColor==Color.SkyBlue)
             {
                 lblchair.BackColor = Color.Maroon;
+            }
+            else if (lblchair.BackColor==Color.YellowGreen)
+            {
+                MessageBox.Show("The chair " + lblchair.Text + " is taken.");
             }
             
         }
