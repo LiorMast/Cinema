@@ -40,7 +40,8 @@ namespace eShop
             cmbMovies.Items.AddRange(titles);
             cmbMovies.SelectedIndex = 0;
             UpdateUserLabel();
-            cmbScreeningTIme.Items.AddRange(Enum.GetNames(typeof(Ticket.ScreeningTime)));
+            cmbScreeningTIme.Items.AddRange(screeningTimes);
+            cmbScreeningTIme.SelectedIndex = 0;
         }
 
         private void GetArrays()
@@ -87,7 +88,10 @@ namespace eShop
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            Ticket t = new Ticket(selectedMovie, "1", , 10.3);
+            //SeatSelectorForm seatSelectorForm = new SeatSelectorForm();
+            //seatSelectorForm.ShowDialog();
+
+            Ticket t = new Ticket(selectedMovie, "1", (Ticket.ScreeningTime)cmbScreeningTIme.SelectedIndex, 10.3);
             activeUser.GetCart().AddItem(t);
             UpdateUserLabel();
         }

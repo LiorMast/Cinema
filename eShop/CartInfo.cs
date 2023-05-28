@@ -47,7 +47,7 @@ namespace eShop
 
         private void lstCartItems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedItem = cart.GetItems()[lstCartItems.SelectedIndex];
+            try { selectedItem = cart.GetItems()[lstCartItems.SelectedIndex]; } catch(Exception) { selectedItem = null; }
         }
 
         private void btnCartRemove_Click(object sender, EventArgs e)
