@@ -14,11 +14,11 @@ namespace eShop
 
         public enum ScreeningTime
         {
-            _10AM = 10,
-            _13PM = 13,
-            _16PM = 16,
-            _19PM = 19,
-            _22PM = 22
+            _10AM = 0,
+            _13PM,
+            _16PM,
+            _19PM,
+            _22PM
         }
 
         public Ticket(Movie movie, string seatNumber, ScreeningTime screeningTime, double price) : base(price)
@@ -58,33 +58,14 @@ namespace eShop
             return screeningTime;
         }
 
-        public string ScreeningTimeToString(ScreeningTime screeningTime)
+        public static string ScreeningTimeToString(ScreeningTime screeningTime)
         {
-            if(screeningTime == ScreeningTime._10AM)
-            {
-                return "10:00";
-            }
-            else if(screeningTime == ScreeningTime._13PM)
-            {
-                return "13:00";
-            }
-            else if(screeningTime == ScreeningTime._16PM)
-            {
-                return "16:00";
-            }
-            else if(screeningTime == ScreeningTime._19PM)
-            {
-                return "19:00";
-            }
-            else if(screeningTime == ScreeningTime._22PM)
-            {
-                return "22:00";
-            }
-            else
-            {
+            string[] hours = { "10:00", "13:00", "16:00", "19:00", "22:00" };
+            try{
+                return hours[(int)screeningTime];
+            }catch(Exception){
                 return "Invalid screening time.";
             }
-
         }
 
         

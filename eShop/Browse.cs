@@ -19,6 +19,7 @@ namespace eShop
         private int featuredPicCounter = 1;
         private string[] picPaths;
         private string[] titles;
+        private string[] screeningTimes;
 
         public Browse()
         {
@@ -46,12 +47,16 @@ namespace eShop
             int length = movies.GetCurrentIndex();
             picPaths = new string[length];
             titles = new string[length];
+            screeningTimes = new string[Enum.GetNames(typeof(Ticket.ScreeningTime)).Length];
             for (int i = 0; i < length; i++)
             {
                 picPaths[i] = movies.GetMovies()[i].GetPicture();
                 titles[i] = movies.GetMovies()[i].GetTitle();
             }
-            
+            for (int i = 0; i < Enum.GetNames(typeof(Ticket.ScreeningTime)).Length; i++)
+            {
+                screeningTimes[i] = Ticket.ScreeningTimeToString((Ticket.ScreeningTime)i);
+            }
         }
 
         private void UpdateUserLabel() => lblUsrInfo.Text = $"Name: {activeUser.GetUsername()}\nItems in cart: {activeUser.GetCart().GetItemCount()}\nTotal: {activeUser.GetCart().GetTotalPrice()}";
