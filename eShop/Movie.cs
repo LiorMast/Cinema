@@ -35,8 +35,8 @@ namespace eShop
             SetDirector(director);
             SetDuration(duration);
             SetGenre(genre);
-            this.picturePath = picturePath;
-            this.description = description;
+            SetPicture(picturePath);
+            SetDescription(description);
         }
 
         public string GetTitle()
@@ -87,6 +87,12 @@ namespace eShop
         }
 
         public string GetPicture() => picturePath;
+
+        public  void SetPicture(string newPicture) { if (newPicture != null) { picturePath = newPicture; } else { throw new Exception("Invalid picture path."); } }
+
+        public string GetDescription() => description;
+
+        public void SetDescription(string newDescription) { if (newDescription != null) { description = newDescription; } else { throw new Exception("Invalid description."); } }
 
 public override string ToString()
 {
