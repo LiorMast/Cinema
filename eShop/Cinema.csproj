@@ -53,6 +53,12 @@
     <Compile Include="CartInfo.Designer.cs">
       <DependentUpon>CartInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeatBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatBooking.Designer.cs">
+      <DependentUpon>SeatBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="SeatSelectorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     <Compile Include="UserCollection.cs" />
     <EmbeddedResource Include="CartInfo.resx">
       <DependentUpon>CartInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatBooking.resx">
+      <DependentUpon>SeatBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeatSelectorForm.resx">
       <DependentUpon>SeatSelectorForm.cs</DependentUpon>
