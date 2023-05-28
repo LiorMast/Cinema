@@ -22,7 +22,8 @@ namespace eShop
             picPoster.ImageLocation = movie.GetPicture();
             lblMovieTitle.Text = movie.GetTitle();
             lblMovieDetails.Text = $"Director: {movie.GetDirector()}\nGenre: {movie.GetGenre()}\nLength: {movie.GetDuration()} minutes";
-            lblDescription.Text = "Description: " + movie.GetDescription();
+            rtbDescription.Text = movie.GetDescription();
+            rtbDescription.Width = this.Width;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace eShop
 
         private void MovieDetails_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
