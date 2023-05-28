@@ -22,13 +22,14 @@ namespace eShop
         public CartInfo(Cart cart) : this()
         {
             this.cart = cart;
+            UpdateCartList();
+            lstCartItems.SelectedIndex = 0;
+            UpdateCartSummary();
         }
 
         private void CartInfo_Load(object sender, EventArgs e)
         {
-            UpdateCartList();
-            lstCartItems.SelectedIndex = 0;
-            UpdateCartSummary();
+
         }
 
         private void UpdateCartList()

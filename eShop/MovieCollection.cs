@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
 
 namespace eShop
 {
@@ -91,23 +92,35 @@ namespace eShop
         public void LoadMovies()
         {
             string[] file = File.ReadAllLines(@"..\..\Data\movies.txt");
-
-            for (int i = 0; i < file.Length; i++)
+            string[] lines = new string[file.Length];
+            int i = 0;
+            int j =0;
+            for (; i < file.Length; i++)
             {
-                file[i] = file[i].Trim().Replace("(", "").Replace(")", "");
-            }
-            foreach (var item in file)
-            {
-                string[] temp = item.Split(',');
-                for (int i = 0; i < temp.Length; i++)
+                if (file[i].Trim() != "") if (file[i][0] == '(')
                 {
-                    temp[i] = temp[i].Trim().Replace("\"", "");
+                    lines[j++] = file[i].Trim().Replace("(", "").Replace(")", "");
                 }
-                Movie.Genre gen;
-                Enum.TryParse(temp[3], true, out gen);
-                string path = @"..\..\Data\Posters\" + temp[4];
-                Movie mov = new Movie(temp[0], temp[1], int.Parse(temp[2]), gen, path, temp[5]);
-                this.AddMovie(mov);
+                else continue;
+            }
+            Array.Resize(ref lines, j);
+
+            foreach (var item in lines)
+            {
+                string[] temp = item.Split(';');
+                for (int k = 0; k < temp.Length; k++)
+                {
+                    temp[k] = temp[k].Trim().Replace("\"", "");
+                }
+                
+                try { 
+                    Movie.Genre gen;
+                    Enum.TryParse(temp[3], true, out gen);
+                    string path = @"..\..\Data\Posters\" + temp[4];
+                    Movie mov = new Movie(temp[0], temp[1], int.Parse(temp[2]), gen, path, temp[5]);
+                    this.AddMovie(mov);
+                    }   
+                    catch (Exception ex) { MessageBox.Show(ex.Message + " " + temp[3]); }
 
 
             }

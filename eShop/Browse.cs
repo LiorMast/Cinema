@@ -98,9 +98,15 @@ namespace eShop
 
         private void ViewCart()
         {
-            CartInfo cartInfo = new CartInfo(activeUser.GetCart());
-            cartInfo.ShowDialog();
-            UpdateUserLabel();
+            try
+            {
+                CartInfo cartInfo = new CartInfo(activeUser.GetCart());
+                cartInfo.ShowDialog();
+                UpdateUserLabel();
+            }catch (Exception ex)
+            {
+                MessageBox.Show("Cart is empty!", "Empty cart", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
         }
 
         private void btnViewCart_Click(object sender, EventArgs e)
