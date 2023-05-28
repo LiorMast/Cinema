@@ -53,7 +53,7 @@ namespace Cinema
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            Browse frm = new Browse(new User("TESTrrrrrrrrrrrrrrrrrr","TEST@TEST.TEST","1234",new DateTime(1990,1,1)));
+            Browse frm = new Browse(new User("TESTrrrrrrrrrrrrrrrrrr","TEST@TEST.TEST","1234",new DateTime(1990,1,1), "0500000000"));
             frm.ShowDialog();
         }
     }
