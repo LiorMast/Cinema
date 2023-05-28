@@ -32,6 +32,7 @@
             this.lblMovieTitle = new System.Windows.Forms.Label();
             this.lblMovieDetails = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
+            this.rtbDescription = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPoster)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,7 +40,7 @@
             // 
             this.picPoster.Location = new System.Drawing.Point(13, 13);
             this.picPoster.Name = "picPoster";
-            this.picPoster.Size = new System.Drawing.Size(297, 395);
+            this.picPoster.Size = new System.Drawing.Size(297, 438);
             this.picPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPoster.TabIndex = 0;
             this.picPoster.TabStop = false;
@@ -69,12 +70,24 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(324, 284);
+            this.lblDescription.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.Location = new System.Drawing.Point(327, 284);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(91, 31);
+            this.lblDescription.Size = new System.Drawing.Size(72, 14);
             this.lblDescription.TabIndex = 3;
-            this.lblDescription.Text = "label1";
+            this.lblDescription.Text = "Description";
+            // 
+            // rtbDescription
+            // 
+            this.rtbDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rtbDescription.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbDescription.Location = new System.Drawing.Point(330, 302);
+            this.rtbDescription.Name = "rtbDescription";
+            this.rtbDescription.ReadOnly = true;
+            this.rtbDescription.Size = new System.Drawing.Size(466, 149);
+            this.rtbDescription.TabIndex = 4;
+            this.rtbDescription.Text = "";
             // 
             // MovieDetails
             // 
@@ -82,12 +95,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(625, 431);
+            this.ClientSize = new System.Drawing.Size(808, 463);
+            this.Controls.Add(this.rtbDescription);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblMovieDetails);
             this.Controls.Add(this.lblMovieTitle);
             this.Controls.Add(this.picPoster);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MovieDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MovieDetails";
             this.Load += new System.EventHandler(this.MovieDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picPoster)).EndInit();
@@ -102,5 +119,6 @@
         private System.Windows.Forms.Label lblMovieTitle;
         private System.Windows.Forms.Label lblMovieDetails;
         private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.RichTextBox rtbDescription;
     }
 }

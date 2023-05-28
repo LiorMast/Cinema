@@ -13,16 +13,18 @@ namespace eShop
         private string email;
         private string password;
         private DateTime birthdate;
+        private string phone;
         private Cart cart;
 
-        public User(string username, string email, string password, DateTime birthdate)
+        public User(string username, string email, string password, DateTime birthdate, string phone)
         {
-            
+
             SetUsername(Capitalize(username));
             SetEmail(email);
             SetPassword(password);
             SetBirthdate(birthdate);
             cart = new Cart();
+            this.phone = phone;
         }
 
         public static string Capitalize(string str) => $"{str[0].ToString().ToUpper()}{str.Substring(1).ToLower()}";
