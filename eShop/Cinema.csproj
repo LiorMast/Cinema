@@ -65,6 +65,12 @@
     <Compile Include="SeatSelectorForm.Designer.cs">
       <DependentUpon>SeatSelectorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeatBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatBooking.Designer.cs">
+      <DependentUpon>SeatBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SeatSelectorForm.resx">
       <DependentUpon>SeatSelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatBooking.resx">
+      <DependentUpon>SeatBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomePage.resx">
       <DependentUpon>WelcomePage.cs</DependentUpon>
