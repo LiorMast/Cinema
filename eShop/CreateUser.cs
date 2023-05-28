@@ -25,7 +25,7 @@ namespace eShop
         {
             try
             {
-                temp = new User(txtUsrName.Text, txtEmail.Text, txtPassword.Text, dtpBirthday.Value);
+                temp = new User(txtUsrName.Text, txtEmail.Text, txtPassword.Text, dtpBirthday.Value, txtUserPhone.Text);
                 Close();
             }
             catch (IndexOutOfRangeException){ MessageBox.Show("Invalid Input!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error); }

@@ -23,8 +23,8 @@ namespace eShop
             SetEmail(email);
             SetPassword(password);
             SetBirthdate(birthdate);
+            SetPhone(phone);
             cart = new Cart();
-            this.phone = phone;
         }
 
         public static string Capitalize(string str) => $"{str[0].ToString().ToUpper()}{str.Substring(1).ToLower()}";
@@ -51,6 +51,12 @@ namespace eShop
             return regex.IsMatch(input);
         }
 
+        private static bool IsValidPhone(string input)
+        {
+            Regex regex = new Regex("^0[0-9]{9}$", RegexOptions.IgnoreCase);
+            return regex.IsMatch(input);
+        }
+
         public void SetEmail(string newEmail)
         {
             if (IsValidEmail(newEmail))
@@ -62,6 +68,20 @@ namespace eShop
                 throw new Exception("Invalid email format.");
             }
         }
+
+        public void SetPhone(string newPhone)
+        {
+            if (IsValidPhone(newPhone))
+            {
+                phone = newPhone;
+            }
+            else
+            {
+                throw new Exception("Invalid phone format.");
+            }
+        }
+
+        public string GetPhone() => phone;
 
         public string GetPassword()
         {
