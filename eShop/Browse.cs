@@ -39,6 +39,7 @@ namespace eShop
             cmbMovies.Items.AddRange(titles);
             cmbMovies.SelectedIndex = 0;
             UpdateUserLabel();
+            cmbScreeningTIme.Items.AddRange(Enum.GetNames(typeof(Ticket.ScreeningTime)));
         }
 
         private void GetArrays()
@@ -53,6 +54,8 @@ namespace eShop
             }
             
         }
+
+        
 
         private void UpdateUserLabel() => lblUsrInfo.Text = $"Name: {activeUser.GetUsername()}\nItems in cart: {activeUser.GetCart().GetItemCount()}\nTotal: {activeUser.GetCart().GetTotalPrice()}";
 
@@ -79,7 +82,7 @@ namespace eShop
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            Ticket t = new Ticket(selectedMovie, "1", new DateTime(2024,1,1), 10.3);
+            Ticket t = new Ticket(selectedMovie, "1", , 10.3);
             activeUser.GetCart().AddItem(t);
             UpdateUserLabel();
         }
@@ -99,6 +102,11 @@ namespace eShop
         private void lblUsrInfo_Click(object sender, EventArgs e)
         {
             ViewCart();
+        }
+
+        private void cmbScreeningTIme_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,6 +37,9 @@
             this.lblUsrInfo = new System.Windows.Forms.Label();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnViewCart = new System.Windows.Forms.Button();
+            this.cmbScreeningTIme = new System.Windows.Forms.ComboBox();
+            this.lblMovieName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picFeatured)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,9 +71,9 @@
             // cmbMovies
             // 
             this.cmbMovies.FormattingEnabled = true;
-            this.cmbMovies.Location = new System.Drawing.Point(399, 125);
+            this.cmbMovies.Location = new System.Drawing.Point(296, 120);
             this.cmbMovies.Name = "cmbMovies";
-            this.cmbMovies.Size = new System.Drawing.Size(121, 21);
+            this.cmbMovies.Size = new System.Drawing.Size(265, 21);
             this.cmbMovies.TabIndex = 2;
             this.cmbMovies.SelectedIndexChanged += new System.EventHandler(this.cmbMovies_SelectedIndexChanged);
             // 
@@ -119,11 +122,41 @@
             this.btnViewCart.UseVisualStyleBackColor = true;
             this.btnViewCart.Click += new System.EventHandler(this.btnViewCart_Click);
             // 
+            // cmbScreeningTIme
+            // 
+            this.cmbScreeningTIme.FormattingEnabled = true;
+            this.cmbScreeningTIme.Location = new System.Drawing.Point(697, 120);
+            this.cmbScreeningTIme.Name = "cmbScreeningTIme";
+            this.cmbScreeningTIme.Size = new System.Drawing.Size(91, 21);
+            this.cmbScreeningTIme.TabIndex = 7;
+            this.cmbScreeningTIme.SelectedIndexChanged += new System.EventHandler(this.cmbScreeningTIme_SelectedIndexChanged);
+            // 
+            // lblMovieName
+            // 
+            this.lblMovieName.AutoSize = true;
+            this.lblMovieName.Location = new System.Drawing.Point(251, 124);
+            this.lblMovieName.Name = "lblMovieName";
+            this.lblMovieName.Size = new System.Drawing.Size(42, 13);
+            this.lblMovieName.TabIndex = 8;
+            this.lblMovieName.Text = "Movie: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(656, 124);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "TIme: ";
+            // 
             // Browse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblMovieName);
+            this.Controls.Add(this.cmbScreeningTIme);
             this.Controls.Add(this.btnViewCart);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.lblUsrInfo);
@@ -150,5 +183,8 @@
         private System.Windows.Forms.Label lblUsrInfo;
         private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Button btnViewCart;
+        private System.Windows.Forms.ComboBox cmbScreeningTIme;
+        private System.Windows.Forms.Label lblMovieName;
+        private System.Windows.Forms.Label label1;
     }
 }
